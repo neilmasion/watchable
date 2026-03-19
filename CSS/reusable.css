@@ -60,7 +60,7 @@ section h5 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #0f0f0f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,19 +76,54 @@ section h5 {
     pointer-events: none;
 }
 
-.spinner {
-    border: 4px solid rgba(255, 255, 255, 0.842);
-    border-top: 8px solid rgb(255, 70, 85);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 1s linear infinite;
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-#loading-screen p {
+.loader-logo {
+    font-size: 3.5rem;
     color: #fff;
-    font-size: 18px;
-    margin: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: pulseLogo 1.5s infinite alternate ease-in-out;
+}
+
+.loader-logo span {
+    color: rgb(255, 70, 85);
+}
+
+.loader-bar {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: rgb(255, 70, 85);
+    border-radius: 4px;
+    animation: loadBar 1s infinite ease-in-out alternate;
+}
+
+@keyframes pulseLogo {
+    0% { transform: scale(0.98); opacity: 0.8; }
+    100% { transform: scale(1.02); opacity: 1; text-shadow: 0 0 15px rgba(255, 70, 85, 0.4); }
+}
+
+@keyframes loadBar {
+    0% { left: -50%; }
+    100% { left: 100%; }
 }
 
 
