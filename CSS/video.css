@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: .5rem;
-    color: #000;
+    color: #e0e0e0;
 }
 
 .videoBox {
@@ -23,7 +23,9 @@
 }
 
 .videoBox:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.15);
+    z-index: 2;
 }
 
 .video h5 {
@@ -35,7 +37,7 @@
     padding: 5px;
     margin: .1rem 0;        
     font-size: 14px;
-    color: #242e35;                 
+    color: #e0e0e0;                 
 }
 
 /*-- MEDIA QUERY FOR RESPONSIVE DESIGN --*/

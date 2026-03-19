@@ -7,12 +7,12 @@
 .spotlight-wrapper {
     display: flex;
     position: relative;
-    height: 600px;
+    height: 480px;
     overflow: hidden;
 }
 
 .spotlight-info {
-    width: 400px;
+    width: 320px;
     background: #000;
     backdrop-filter: blur(50px);
 }
@@ -71,9 +71,9 @@
 
 .text-overlay {
     position: absolute;
-    padding-right: 5rem;
-    left: 3rem;
-    top: 37%;
+    padding-right: 4rem;
+    left: 2.5rem;
+    top: 35%;
     z-index: 3;
     color: #fff;
 }
@@ -87,7 +87,7 @@
 
 .text-overlay p {
     margin-bottom: 1rem;
-    font-size: 13px;
+    font-size: 11px;
     width: 60%;
 }
 
@@ -96,11 +96,11 @@
 }
 
 .text-overlay h2 {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .text-overlay h4 {
-    font-size: 15px;
+    font-size: 12px;
     margin: 0;
 }
 
@@ -138,8 +138,8 @@
 }
 
 #small-dialog iframe {
-    width: 50vw;
-    height: 25vw;
+    width: 40vw;
+    height: 20vw;
     border-radius: 8px;
     border: 5px solid #fff;
 }

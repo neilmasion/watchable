@@ -1,13 +1,13 @@
 /*-- TRENDING SECTION --*/
 .trendingSection h5 {
-    font-size: 1.6rem; 
-    margin-bottom: 15px;
+    font-size: 1.3rem; 
+    margin-bottom: 12px;
 }
 
 .gridContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    margin: 0 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+    margin: 0 1.5rem;
     gap: 1rem; 
 }
 
@@ -18,6 +18,12 @@
     cursor: pointer;
     aspect-ratio: 3 / 4;
     transition: 0.3s ease;
+}
+
+.trendingItem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.2);
+    z-index: 2;
 }
 
 .trendingItem img {
@@ -40,12 +46,12 @@
 }
 
 .trendingInfo h4 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin: 0;
 }
 
 .trendingInfo p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     width: 80%;
     margin: 5px 0 0;
 }
@@ -73,11 +79,13 @@
 
 .modalContent {
     position: relative;
-    background-color: #fff;
+    background-color: #1a1d24;
     border-radius: 8px;
     max-width: 500px;
     width: 90%;
     overflow: hidden;
+    color: #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .modalImage {
@@ -109,7 +117,7 @@
 
 .modalDetails {
     padding: 20px;
-    color: #333;
+    color: #e0e0e0;
 }
 
 .modalDetails h5 {
