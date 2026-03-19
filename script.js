@@ -1,10 +1,14 @@
 // LOADING SCREEN 
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.classList.add('fade-out');
+    
+    // Slight delay so the animation can be seen briefly before it sweeps away
     setTimeout(() => {
-        loadingScreen.style.display = 'none';
-    }, 500);
+        loadingScreen.classList.add('fade-out');
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 600);
 });
 
 // HAMBURGER MENU FUNCTION
