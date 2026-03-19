@@ -1,0 +1,241 @@
+/*-- ABOUT US SECTION --*/
+section {
+    margin: 2rem 0;
+    padding: 3rem;
+}
+
+.background {
+    padding-bottom: 6rem;
+    background: linear-gradient(180deg, rgb(250, 250, 250), rgba(42, 62, 71, 0.8));
+}
+
+.background1 {
+    margin-top: -8rem;
+    width: 100%;
+    border-radius: 7rem 7rem 0;
+    background-color: #f5f5f5;
+}
+
+.topBar {
+    background-color: #f5f5f5;
+}
+
+.about-content p {
+    font-size: 0.9rem; 
+    color: rgba(0, 0, 0, 0.7); 
+    padding: 1rem 0; 
+}
+
+.aboutLogo {
+    margin-bottom: 2rem;
+}
+
+.customLogo {
+    text-decoration: none; 
+    display: inline-block;
+    text-align: left;
+    font-size: 1.7rem; 
+    cursor: pointer;
+    color: rgb(255, 70, 85);
+    transition: .3s ease;
+}
+
+.customLogo span{
+    color: #242e35;
+}
+
+.customLogo:hover {
+    transform: scale(1.02);
+}
+
+.customLogo span {
+    color: rgb(255, 70, 85);
+}
+
+.customLogo h3 {
+    color: #242e35;
+}
+
+.customLogo p {
+    font-size: .9rem;
+    color: #242e35;
+}
+
+.logoSubtext {
+    font-size: 1rem;
+    color: #242e35;
+}
+
+.about-content h1, .mission h1, .vision h1, .team h1 {
+    color: #242e35;
+    font-size: 1.5rem; 
+}
+
+.about-content p, .mission p, .vision p, .team p {
+    margin: 1rem;
+}
+
+/*-- MISSION SECTION --*/
+.mission, .vision {
+    width: 80%;
+}
+
+/*-- VISION SECTION --*/
+.vision {
+    text-align: right;
+    margin-left: 20%;
+}
+
+/*-- TEAM SECTION --*/
+.team {
+    padding-bottom: 0;
+}
+
+.team .about-content {
+    margin: 0;
+    text-align: center;
+}
+
+.profile {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.profileGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 2rem; 
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #8a88889c;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 10px; 
+    transition: 0.3s ease;
+    width: 40%;
+}
+
+.profileContainer:hover {
+    background-color: #474747cc;
+    transform: scale(1.05); 
+}
+
+.profileContainer img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    background-position: center;
+}
+
+.profileItem {
+    padding: .5rem;
+    color: #fff;
+    text-align: center; 
+}
+
+.profileItem p {
+    font-size: 12px;
+    margin-left: .5rem;
+}
+
+/* TESTIMONIAL SECTION */
+.aboutTestimonial {
+    margin: 50px 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.aboutTestimonial h2 {
+    font-size: 1.5rem;
+    color: #242e35;
+    margin-bottom: 30px;
+}
+
+.testimonialGrid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonialBox {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.testimonialBox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonialBox img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonialQuote {
+    font-style: italic;
+    font-size: .8rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonialName{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonialRole {
+    font-size: .8rem;
+    color: #777;
+}
+
+/*-- MEDIA QUERY FOR RESPONSIVE DESIGN --*/
+@media (min-width: 1200px) {
+    .profileContainer {
+        width: 30%;
+    }
+}
+
+@media (max-width: 750px) {
+    .profileContainer {
+        width: 90%;
+    }
+    .profileContainer img {
+        width: 100px;
+        height: 100px; 
+    }
+}
+
+@media (max-width: 550px) {
+    #about {
+        padding-bottom: 0;
+    }
+    .mission, .vision {
+        width: 100%;
+        padding-bottom: 0;
+    }
+    .vision {
+       margin-left: 0;
+    }
+}

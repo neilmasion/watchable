@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semi-Final Project</title>
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/reusable.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div class="container wrapper">
+        <!-- HEADER -->
+        <header class="header" id="header">
+            <nav class="navbar">
+                <div class="hamburger" id="hamburger">
+                    <i class="ri-menu-2-line"></i>
+                </div>
+                <div class="navMenu" id="navMenu">
+                    <div class="navLogo">
+                        <a href="index.html" class="logo">
+                            <h3>Watch<span>able.</span></h3>
+                        </a>
+                    </div>
+                    <ul class="navList">
+                        <li class="navItem">
+                            <i class="ri-play-circle-fill"></i>
+                            <a href="index.html" class="navLink">Home</a>
+                        </li>
+                        <li class="navItem">
+                            <i class="ri-book-read-fill"></i>
+                            <a href="about.html" class="navLink">About Us</a>
+                        </li>
+                        <li class="navItem">
+                            <i class="ri-contacts-fill"></i>
+                            <a href="contact.html" class="navLink">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <main class="content">
+                <div class="background">
+                    <div class="topBar" id="topBar">
+                        <div class="searchBar">
+                            <input type="search" placeholder="Search everything">
+                            <button id="btn" onclick="popUp()">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+                        <div class="topIcons">
+                            <div class="notification-icon" onclick="toggleNotificationPopup()">
+                                <i class="ri-notification-4-line"></i>
+                                <span class="tooltip1">Notifications</span>
+    
+                                <!-- Notification Popup -->
+                                <div class="notification-popup" id="notificationPopup">
+                                    <p>Notifications</p>
+                                    <hr>
+    
+                                    <p>No new notifications yet</p>
+                                </div>
+                            </div>
+                            <div class="notification-icon">
+                                <a href="account.html"><i class="ri-account-circle-fill"></i></a>
+                                <span class="tooltip2">User</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABOUT US SECTION -->
+                    <section class="about" id="about">
+                        <div class="aboutLogo">
+                            <a href="#topBar" class="customLogo">
+                                <h3><span>Watch</span>able.</h3>
+                                <p class="logoSubtext">WATCH. EXPLORE. ENJOY</p>
+                            </a>
+                        </div>
+
+                        <div class="about-content">
+                            <h1>About Us</h1>
+                            <p>Welcome to Watchable where you can watch and experience for creative multimedia content!
+                                We
+                                are a passionate team dedicated to bringing you visually stunning videos, and
+                                cutting-edge
+                                multimedia experiences. Whether you're a fan of short films, educational videos, trendy
+                                movies, or creative animations, we aim to deliver high-quality content that inspires,
+                                informs, and entertains.</p>
+                            <p>Our website is a platform for creators and audiences alike to explore the art of
+                                storytelling
+                                through multimedia. We showcase diverse content from talented individuals for you to
+                                enjoy,
+                                while providing a space for creators to share their own work. At Watchable, we believe
+                                in
+                                the power of multimedia to connect people and ideas across the globe.</p>
+                        </div>
+                    </section>
+
+
+                    <div class="align">
+                        <!-- MISSION SECTION -->
+                        <section class="mission" id="mission">
+                            <div class="about-content">
+                                <h1>Our Mission</h1>
+                                <p>At Watchable, our mission is to inspire and empower creators through the art of
+                                    multimedia.
+                                    We aim to be a leading platform for innovative and diverse video content, where
+                                    creativity
+                                    knows no bounds. Our focus is on fostering a community that values artistic
+                                    expression,
+                                    storytelling, and entertainment excellence.</p>
+                            </div>
+                        </section>
+
+
+                        <!-- VISION SECTION -->
+                        <section class="vision" id="vision">
+                            <div class="about-content">
+                                <h1>Our Vision</h1>
+                                <p>At Watchable, our vision is to have significant contribution in the multimedia
+                                    industry,
+                                    transforming the way people experience and engage with digital films. We envision a
+                                    future
+                                    where creators of all backgrounds and skill levels have access to a dynamic platform
+                                    that
+                                    empowers them to express their creativity and share their works with the world.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="background1">
+                    <!-- TEAMS SECTION -->
+                    <section class="team" id="team">
+                        <div class="about-content">
+                            <h1>Meet Our Team</h1>
+                            <p>Our team is made up of passionate multimedia enthusiasts with the common love of sharing
+                                digital entertainment. Our team is dedicated to continuously exploring new techniques and
+                                technologies to deliver high-quality, engaging content.</p>
+                        </div>
+                    </section>
+
+                    <!-- PROFILE SECTION -->
+                    <section class="profile" id="profile">
+                        <div class="profileGrid">
+                            <div class="profileContainer">
+                                <img src="Images/profile1.jpg" alt="profile #1">
+                                <div class="profileItem">
+                                    <h4>Neil Francis Masion</h4>
+                                    <p>An aspiring filmmaker, I enjoys creating captivating stories that resonate with
+                                        audiences everywhere.</p>
+                                </div>
+                            </div>
+                            <div class="profileContainer">
+                                <img src="Images/profile2.jpg" alt="profile #2">
+                                <div class="profileItem">
+                                    <h4>Kevin Clide Bautista</h4>
+                                    <p>A passionate gamer and tech enthusiast, I spends most of his time diving into the
+                                        latest games and gadgets.</p>
+                                </div>
+                            </div>
+                            <div class="profileContainer">
+                                <img src="Images/profile3.jpg" alt="profile #3">
+                                <div class="profileItem">
+                                    <h4>Stephen Bula</h4>
+                                    <p>Known for his charisma and leadership skills, I am often the one bringing people
+                                        together for creative projects.</p>
+                                </div>
+                            </div>
+                            <div class="profileContainer">
+                                <img src="Images/profile4.jpg" alt="profile #4">
+                                <div class="profileItem">
+                                    <h4>Chrisalven Cui</h4>
+                                    <p>With a knack for storytelling, I enjoys writing and sharing his adventures through
+                                        various creative mediums.</p>
+                                </div>
+                            </div>
+                            <div class="profileContainer">
+                                <img src="Images/profile5.jpg" alt="profile #5">
+                                <div class="profileItem">
+                                    <h4>Rostom Jade Mosqueda</h4>
+                                    <p>I dedicated student and athlete, always striving for excellence in both academics and
+                                        sports.</p>
+                                </div>
+                            </div>
+                            <div class="profileContainer">
+                                <img src="Images/profile6.jpg" alt="profile #6">
+                                <div class="profileItem">
+                                    <h4>Junel De Gracia</h4>
+                                    <p>I am talented musician, I passion for music shines through in every performance he
+                                        gives, inspiring those around him.</p>
+                                </div>
+                            </div>
+                            <div class="profileContainer">
+                                <img src="Images/profile7.jpg" alt="profile #7">
+                                <div class="profileItem">
+                                    <h4>Chris Cantoria</h4>
+                                    <p>A creative thinker known for his innovative ideas and artistic flair. I loves
+                                        exploring new trends in multimedia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="aboutTestimonial" id="testimonial">
+                        <h2>What Our Users Say</h2>
+                        <div class="testimonialGrid">
+                            <div class="testimonialBox">
+                                <img src="Images/comment1.jpg" alt="User Image">
+                                <div class="testimonialContent">
+                                    <p class="testimonialQuote">"I'm loving the beta version so far! The layout is super easy to use, and I'm excited to see what's coming next."</p>
+                                    <h4 class="testimonialName">Jay-r Calunsag</h4>
+                                    <p class="testimonialRole">Student</p>
+                                </div>
+                            </div>
+                            <div class="testimonialBox">
+                                <img src="Images/comment2.jpg" alt="User Image">
+                                <div class="testimonialContent">
+                                    <p class="testimonialQuote">"This site is off to a great start! It's clean and simple to navigate. Can't wait to see how it all comes together!"</p>
+                                    <h4 class="testimonialName">Albert Villasor </h4>
+                                    <p class="testimonialRole">Student</p>
+                                </div>
+                            </div>
+                            <div class="testimonialBox">
+                                <img src="Images/comment3.jpg" alt="User Image">
+                                <div class="testimonialContent">
+                                    <p class="testimonialQuote">"I'm having fun exploring the beta version. The design is cool, and I can tell it's gonna get even better with time."</p>
+                                    <h4 class="testimonialName">Merco Cabarrubias </h4>
+                                    <p class="testimonialRole">Student</p>
+                                </div>
+                            </div>
+                            <div class="testimonialBox">
+                                <img src="Images/comment4.jpg" alt="User Image">
+                                <div class="testimonialContent">
+                                    <p class="testimonialQuote">"The site's looking awesome so far! It's easy to use and has tons of potential. Excited to see what features get added next!"</p>
+                                    <h4 class="testimonialName">Jerimy Hermoso</h4>
+                                    <p class="testimonialRole">Student</p>
+                                </div>
+                            </div>                            
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footerContainer">
+                    <div class="footerSection">
+                        <h4>About Us</h4>
+                        <p>Thanks for visiting! Explore our world of videos, music, and more. Stay connected for updates!</p>
+                    </div>
+                    <div class="footerSection">
+                        <h4>Section Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#music">Music</a></li>
+                            <li><a href="#videos">Videos</a></li>
+                            <li><a href="#trending">Trending</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerSection">
+                        <h4>Follow Us</h4>
+                        <div class="socialIcons">
+                            <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://twitter.com/"><i class="ri-twitter-fill"></i></a>
+                            <a href="https://www.instagram.com/"><i class="ri-instagram-fill"></i></a>
+                        </div>
+                        <div class="footerBottom">
+                            <p>&copy; 2024 Educational Purpose. <span>All rights reserved.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

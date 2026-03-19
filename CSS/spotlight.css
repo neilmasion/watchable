@@ -1,0 +1,244 @@
+/*-- SPOTLIGHT SECTION --*/
+.spotlight {
+    margin-top: 0;
+    background-color: #000;
+}
+
+.spotlight-wrapper {
+    display: flex;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.spotlight-info {
+    width: 400px;
+    background: #000;
+    backdrop-filter: blur(50px);
+}
+
+.spotlight-video {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-video video {
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-next {
+    position: relative;
+}
+
+.prev-next .buttons {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 3;
+}
+
+.prev-next button {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #11191a9d;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: .3s ease;
+}
+
+.prev-next button:hover {
+    color: #fff;
+    background-color: rgb(255, 70, 85);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 0%, rgb(0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    padding-right: 5rem;
+    left: 3rem;
+    top: 37%;
+    z-index: 3;
+    color: #fff;
+}
+
+.text-overlay .ranking {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+    color: rgb(255, 0, 0);
+}
+
+.text-overlay p {
+    margin-bottom: 1rem;
+    font-size: 13px;
+    width: 60%;
+}
+
+.text-overlay i {
+    margin-right: 5px;
+}
+
+.text-overlay h2 {
+    font-size: 30px;
+}
+
+.text-overlay h4 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.watch-now {
+    background-color: rgb(255, 70, 85);
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.watch-now a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.watch-now:hover a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 70, 85);
+}
+
+#small-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+    z-index: 101;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+#small-dialog iframe {
+    width: 50vw;
+    height: 25vw;
+    border-radius: 8px;
+    border: 5px solid #fff;
+}
+
+.video-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.video-overlay.active,
+#small-dialog.active {
+    display: block;
+}
+
+/*-- MEDIA QUERY FOR RESPONSIVE DESIGN --*/
+@media (min-width: 2000px) {
+    .spotlight-video video {
+        width: 100%;
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #small-dialog {
+        top: 50%;
+        left: 40%;
+    }
+}
+
+@media (max-width: 750px) {
+    .spotlight-video video {
+        width: 100%;
+    }
+
+    .spotlight-info {
+        display: none;
+    }
+
+    #small-dialog iframe {
+        width: 70vw;
+        height: 45vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .text-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-overlay h2 {
+        font-size: 40px;
+    }
+
+    .text-overlay p {
+        display: none;
+    }
+
+    .prev-next {
+        position: absolute;
+        top: 62%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .prev-next .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .prev-next #prevButton {
+        margin-left: auto;
+        margin-right: 7rem;
+    }
+
+    .prev-next #nextButton {
+        margin-right: auto;
+        margin-left: 10rem;
+    }
+
+    .prev-next button {
+        width: 100px;
+        font-size: 20px;
+    }
+}

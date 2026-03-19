@@ -1,0 +1,129 @@
+    /*-- MAIN SECTION --*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/Images/accountBg.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.wrapperForm {
+    width: 60%; 
+    max-width: 400px; 
+    background-color: #fff; 
+    padding: 30px 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow: auto; 
+}
+
+/*-- HEADER --*/
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header a {
+    font-size: 25px;
+}
+
+.header a:hover {
+    color: rgb(255, 70, 85);
+    text-decoration: none;
+}
+
+.back-link {
+    margin-right: 10px; 
+    text-decoration: none; 
+    color: #242e35;
+}
+
+h2 {
+    color: rgb(255, 70, 85);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+/*-- FORM SECTION --*/
+.inputGroup {
+    margin-bottom: 15px; 
+}
+
+label {
+    color: #242e35;
+    margin-bottom: 5px; 
+    font-size: 14px; 
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+button {
+    padding: 10px 50px;
+    background-color: rgb(255, 70, 85);
+    color: #fff; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: 0.3s ease; 
+}
+
+button:hover {
+    background-color: rgb(218, 43, 57);
+}
+
+.forgot-description {
+    margin-bottom: 20px;
+    color: #242e35;
+    font-size: 14px;
+    text-align: center;
+}
+
+.switch {
+    text-align: center;
+    color: #242e35;
+    margin: 40px 0 10px 0;
+}
+
+a {
+    color: rgb(255, 70, 85);
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+@media (max-width: 450px) {
+    body {
+        background-image: none;
+    }
+    .wrapperForm {
+       width: 100%;
+       height: 100vh;
+       border-radius: 0;
+    }
+}

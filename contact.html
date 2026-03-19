@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semi-Final Project</title>
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/reusable.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div class="container wrapper">
+        <!-- HEADER -->
+        <header class="header" id="header">
+            <nav class="navbar">
+                <div class="hamburger" id="hamburger">
+                    <i class="ri-menu-2-line"></i>
+                </div>
+                <div class="navMenu" id="navMenu">
+                    <div class="navLogo">
+                        <a href="index.html" class="logo">
+                            <h3>Watch<span>able.</span></h3>
+                        </a>
+                    </div>
+                    <ul class="navList">
+                        <li class="navItem">
+                            <i class="ri-play-circle-fill"></i>
+                            <a href="index.html" class="navLink">Home</a>
+                        </li>
+                        <li class="navItem">
+                            <i class="ri-book-read-fill"></i>
+                            <a href="about.html" class="navLink">About Us</a>
+                        </li>
+                        <li class="navItem">
+                            <i class="ri-contacts-fill"></i>
+                            <a href="contact.html" class="navLink">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <main class="content">
+                <div class="topBar" id="topBar">
+                    <div class="searchBar">
+                        <input type="search" placeholder="Search everything">
+                        <button id="btn" onclick="popUp()">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                    <div class="topIcons">
+                        <div class="notification-icon" onclick="toggleNotificationPopup()">
+                            <i class="ri-notification-4-line"></i>
+                            <span class="tooltip1">Notifications</span>
+
+                            <!-- Notification Popup -->
+                            <div class="notification-popup" id="notificationPopup">
+                                <p>Notifications</p>
+                                <hr>
+
+                                <p>No new notifications yet</p>
+                            </div>
+                        </div>
+                        <div class="notification-icon">
+                            <a href="account.html"><i class="ri-account-circle-fill"></i></a>
+                            <span class="tooltip2">User</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT SECTION -->
+                <section class="contact" id="contact">
+                    <div class="contactForm">
+                        <div class="contactLogo">
+                            <a href="#topBar" class="customLogo">
+                                <h3><span class="watch">Watch</span><span class="able">able.</span></h3>
+                                <p class="logoSubtext">WATCH. EXPLORE. ENJOY</p>
+                            </a>
+                        </div>
+                        <h4>Contact Us</h4>
+
+                        <form>
+                            <div class="message">
+                                <input type="text" placeholder="Enter Your Name" required>
+                                <input type="email" placeholder="Enter Your Email" required>
+                                <textarea placeholder="Enter Your Feedback" rows="4" required></textarea>
+                            </div>
+                            <div class="terms">
+                                <label>
+                                    <input type="checkbox" required>
+                                    I agree to the <a href="#">terms</a> and <a href="#">conditions</a>.
+                                </label>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+
+                    <div class="contactInfo">
+                        <div class="infoIcons">
+                            <h4>Contact Info</h4>
+
+                            <img src="Images/contact.png" alt="contact">
+
+                            <div class="infoItem">
+                                <i class="ri-phone-fill"></i>
+                                <span>+921 245 1250</span>
+                            </div>
+                            <div class="infoItem">
+                                <i class="ri-map-pin-fill"></i>
+                                <span>CEC Leon Kilat, Cebu City</span>
+                            </div>
+                            <div class="infoItem">
+                                <i class="ri-mail-fill"></i>
+                                <span>watchable@example.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footerContainer">
+                    <div class="footerSection">
+                        <h4>About Us</h4>
+                        <p>Thanks for visiting! Explore our world of videos, music, and more. Stay connected for
+                            updates!</p>
+                    </div>
+                    <div class="footerSection">
+                        <h4>Section Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#music">Music</a></li>
+                            <li><a href="#videos">Videos</a></li>
+                            <li><a href="#trending">Trending</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerSection">
+                        <h4>Follow Us</h4>
+                        <div class="socialIcons">
+                            <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://twitter.com/"><i class="ri-twitter-fill"></i></a>
+                            <a href="https://www.instagram.com/"><i class="ri-instagram-fill"></i></a>
+                        </div>
+                        <div class="footerBottom">
+                            <p>&copy; 2024 Educational Purpose. <span>All rights reserved.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+
+</html>

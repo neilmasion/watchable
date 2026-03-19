@@ -1,0 +1,114 @@
+/*-- MUSIC SECTION --*/
+.music {
+    margin-top: 0;
+}
+
+.musicGrid {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.music h5 {
+    font-size: 1.6rem; 
+    margin-bottom: 15px;
+}
+
+.musicBox {
+    display: flex; 
+    align-items: center; 
+    background-color: #fff; 
+    border-radius: 8px; 
+    padding: 10px;
+    margin: 0 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: .5s ease;
+}
+
+.musicBox:hover {
+    background-color: rgba(78, 78, 78, 0.562);
+    transform: scale(1.01);
+}
+
+.musicBox img {
+    width: 120px; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-right: 10px; 
+}
+
+.musicInfo {
+    flex: 1; 
+}
+
+.musicInfo h4 {
+    font-size: 16px; 
+    margin: 0 0 4px; 
+}
+
+.musicInfo p {
+    font-size: 14px; 
+    color: #555; 
+    margin: 2px 0; 
+    transition: .5s ease;
+}
+
+.musicProfile {
+    display: flex;
+    align-items: center;
+}
+
+audio {
+    width: 100%; 
+    height: 30px; 
+}
+
+/* PLAYLIST SECTION */
+.playlist {
+    overflow: hidden; 
+}
+
+.playlist h5 {
+    font-size: 1.6rem; 
+    margin-bottom: 15px;
+}
+
+.playlistTrain {
+    display: flex;
+    gap: 16px;
+    animation: scrollConveyor 50s linear infinite;
+    width: calc(100% * 2);
+}
+
+.playlistItem {
+    flex: 0 0 200px; 
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.playlistItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover Effect */
+.playlistItem:hover img {
+    filter: brightness(0.8);
+}
+
+/* Conveyor Belt Animation */
+@keyframes scrollConveyor {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

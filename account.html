@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semi-Final Project</title>
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/reusable.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    
+    <!-- MAIN CONTENT -->
+    <div class="mainContent">
+        <main class="wrapperForm">
+            <!-- LOG IN FORM -->
+            <form class="loginForm" id="loginForm">
+                <div class="header">
+                    <a href="index.html" class="back-link"><i class="ri-arrow-left-line"></i></a>
+                    <h2>Login</h2>
+                </div>
+                
+                <div class="inputGroup">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+                <div class="inputGroup">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <p class="forgotPassword"><a href="#" onclick="toggleForgotPassword()">Forgot Password?</a></p>
+                <div class="buttonContainer">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="switch">
+                    <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
+                </div>
+            </form>
+
+            <!-- FORGOT PASSWORD FORM -->
+            <form class="forgotPass" id="forgotPass" style="display: none;">
+                <div class="header">
+                    <a href="index.html" class="back-link"><i class="ri-arrow-left-line"></i></a>
+                    <h2>Reset Password</h2>
+                </div>
+                
+                <p class="forgot-description">Please enter your email address. We will send you a link to reset your password.</p>
+                
+                <div class="inputGroup">
+                    <label for="forgotEmail">Email:</label>
+                    <input type="email" id="forgotEmail" required placeholder="Enter your email address">
+                </div>
+
+                <div class="buttonContainer">
+                    <button type="submit">Reset Password</button>
+                </div>
+
+                <div class="switch">
+                    <p>Remembered your password? <a href="#" onclick="toggleForgotPassword()">Login</a></p>
+                </div>
+            </form>
+
+            <!-- SIGN UP FORM -->
+            <form class="signupForm" id="signupForm" style="display: none;">
+                <div class="header">
+                    <a href="index.html" class="back-link"><i class="ri-arrow-left-line"></i></a>
+                    <h2>Sign Up</h2>
+                </div>
+                
+                <div class="inputGroup">
+                    <label for="signupName">Name:</label>
+                    <input type="text" id="signupName" required placeholder="Enter your name">
+                </div>
+                <div class="inputGroup">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required placeholder="Enter your email">
+                </div>
+                <div class="inputGroup">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required placeholder="Enter your password">
+                </div>
+                <div class="buttonContainer">
+                    <button type="submit">Sign Up</button>
+                </div>
+                <div class="switch">
+                    <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

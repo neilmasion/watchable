@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semi-Final Project</title>
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/reusable.css">
+    <link rel="stylesheet" href="CSS/spotlight.css">
+    <link rel="stylesheet" href="CSS/trending.css">
+    <link rel="stylesheet" href="CSS/music.css">
+    <link rel="stylesheet" href="CSS/video.css">
+    <link rel="icon" type="image/x-icon" href="Images/web-logo.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div class="container wrapper">
+        <!-- HEADER -->
+        <header class="header" id="header">
+            <nav class="navbar">
+                <div class="hamburger" id="hamburger">
+                    <i class="ri-menu-2-line"></i>
+                </div>
+                <div class="navMenu" id="navMenu">
+                    <div class="navLogo">
+                        <a href="#topBar" class="logo">
+                            <h3>Watch<span>able.</span></h3>
+                        </a>
+                    </div>
+                    <ul class="navList">
+                        <li class="navItem">
+                            <i class="ri-play-circle-fill"></i>
+                            <a href="index.html" class="navLink">Home</a>
+                        </li>
+                        <li class="navItem">
+                            <i class="ri-book-read-fill"></i>
+                            <a href="about.html" class="navLink">About Us</a>
+                        </li>
+                        <li class="navItem">
+                            <i class="ri-contacts-fill"></i>
+                            <a href="contact.html" class="navLink">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="genreGrid">
+                        <h5 class="genre">Discover</h5>
+
+                        <div class="genreBox">
+                            <i class="ri-trello-fill"></i>
+                            <a href="#topBar">Spotlight</a>
+                        </div>
+                        <div class="genreBox">
+                            <i class="ri-clapperboard-fill"></i>
+                            <a href="#trending">Trending</a>
+                        </div>
+                        <div class="genreBox">
+                            <i class="ri-video-fill"></i>
+                            <a href="#video">Videos</a>
+                        </div>
+                        <div class="genreBox">
+                            <i class="ri-music-2-fill"></i>
+                            <a href="#music">Music</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <main class="content">
+                <div class="topBar" id="topBar">
+                    <div class="searchBar">
+                        <input type="search" placeholder="Search everything">
+                        <button id="btn" onclick="popUp()">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                    <div class="topIcons">
+                        <div class="notification-icon" onclick="toggleNotificationPopup()">
+                            <i class="ri-notification-4-line"></i>
+                            <span class="tooltip1">Notifications</span>
+
+                            <!-- Notification Popup -->
+                            <div class="notification-popup" id="notificationPopup">
+                                <p>Notifications</p>
+                                <hr>
+
+                                <p>No new notifications yet</p>
+                            </div>
+                        </div>
+                        <div class="notification-icon">
+                            <a href="account.html"><i class="ri-account-circle-fill"></i></a>
+                            <span class="tooltip2">User</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPOTLIGHT SECTION -->
+                <section class="spotlight" id="spotlight">
+                    <div class="spotlightBox">
+                        <div class="spotlight-wrapper">
+                            <div class="spotlight-info"></div>
+
+                            <div class="spotlight-video">
+                                <video id="spotlightVideo" autoplay loop muted>
+                                    <source src="Video/spot1.mp4" type="video/mp4">
+                                </video>
+                                <div class="overlay"></div>
+                            </div>
+
+                            <div class="text-overlay">
+                                <div class="ranking">
+                                    <i class="ri-arrow-up-circle-fill"></i>
+                                    <h4 id="videoRanking">1 Spotlight</h4>
+                                </div>
+                                <h2 id="videoTitle">The Joker 2</h2>
+                                <p id="videoDescription">The Joker dives even deeper into madness. This time, he's
+                                    pushing every limit, keeping you on the edge with every twist. Watch now and see
+                                    what happens when there's nothing left to lose.</p>
+                                <div class="watch-now">
+                                    <a href="#" class="trailer-popup">
+                                        <i class="ri-play-fill"></i>
+                                        <h6>Watch Full Trailer</h6>
+                                    </a>
+                                    <div class="video-overlay"></div>
+                                    <div id="small-dialog" class="video-dialog">
+                                        <iframe src="https://www.youtube.com/embed/_OKAwz2MsJs?si=I4GhnUdEI0eN2jZQ"
+                                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prev-next">
+                                <div class="buttons">
+                                    <button id="nextButton"><i class="ri-arrow-right-fill"></i></button>
+                                    <button id="prevButton"><i class="ri-arrow-left-fill"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TRENDING SECTION -->
+                <section class="trendingSection" id="trending">
+                    <h5>Trending</h5>
+
+                    <div class="gridContainer">
+                        <div class="trendingItem">
+                            <img src="Images/trend1.jpg" alt="The Joker 2">
+                            <div class="trendingInfo">
+                                <h4>The Joker 2</h4>
+                                <p>A twisted musical journey with Joker and Harley Quinn</p>
+                            </div>
+                        </div>
+                        <div class="trendingItem">
+                            <img src="Images/trend2.jpg" alt="The Venom 3">
+                            <div class="trendingInfo">
+                                <h4>The Venom 3</h4>
+                                <p>Art the Clown returns for a gruesome holiday massacre</p>
+                            </div>
+                        </div>
+                        <div class="trendingItem">
+                            <img src="Images/trend3.jpg" alt="The Outside">
+                            <div class="trendingInfo">
+                                <h4>The Outside</h4>
+                                <p>A zombie that explores survival in an apocalyptic world</p>
+                            </div>
+                        </div>
+                        <div class="trendingItem">
+                            <img src="Images/trend4.jpg" alt="Deadpool 3">
+                            <div class="trendingInfo">
+                                <h4>Deadpool 3</h4>
+                                <p>Ryan Reynolds is back in a wild new adventure</p>
+                            </div>
+                        </div>
+                        <div class="trendingItem">
+                            <img src="Images/trend5.jpg" alt="Despicable Me 4">
+                            <div class="trendingInfo">
+                                <h4>Despicable Me 4</h4>
+                                <p>Gru and the Minions tackle a new villain</p>
+                            </div>
+                        </div>
+                        <div class="trendingItem">
+                            <img src="Images/trend6.jpg" alt="Beetlejuice 2">
+                            <div class="trendingInfo">
+                                <h4>Beetlejuice 2</h4>
+                                <p>Beetlejuice returns for more ghostly mischief</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Trailer Modal Structure -->
+                <div class="movieModal" id="movieModal">
+                    <div class="overlay"></div> <!-- Dark overlay blur -->
+                    <div class="modalContent">
+                        <img src="#" class="modalImage" id="modalImage">
+                        <div class="modalButtons">
+                            <button id="closeModal">Click to Go Back</button>
+                            <button id="watchTrailerBtn">Watch Full Trailer</button>
+                        </div>
+                        <div class="modalDetails" id="modalDetails">
+                            <h5>Details</h5>
+                            <h4 id="modalTitle">Movie Title</h4>
+                            <div class="align">
+                                <p><strong>Director: </strong></p>
+                                <p id="modalDirector">Unknown</p>
+                            </div>
+                            <div class="align">
+                                <p><strong>Date: </strong></p>
+                                <p id="modalReleaseDate">Unknown</p>
+                            </div>
+                            <div class="align">
+                                <p><strong>Plot: </strong></p>
+                                <p id="modalDescription">Movie description.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trailerModal" id="trailerModal">
+                        <button id="exitTrailerBtn" class="exitButton">Exit Trailer</button>
+                        <iframe src="#" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- VIDEO SECTION -->
+                <section class="video" id="video">
+                    <h5>Videos</h5>
+
+                    <div class="videoContainer">
+                        <div class="videoGrid">
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/DUokWmPfQCM?si=wmnZEIZI4i3h9tqm"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>I Spent a Day With Google Software Engineers</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/_SYMq7fw55I?si=jJnZQuQhd4myMZNW"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>That's all you got?</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/VgDytOsG6Xo?si=eb-jyQ6xAW5saml2"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>My First Hackathon!</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/qSu6i2iFMO0?si=vqFWHh_CJMAxDWCS"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>Sonic the Hedgehog 3 | Official Trailer (2024 Movie)</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/6a4W8oSMjl4?si=AS9XvQka_j2AaWk4"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>How YouTubers Film Themselves And Look Cinematic</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/vqXLGX0szIQ?si=5uPA4z7HUQvb6msr"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>Motion Design for the Web | FREE COURSE</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/kuH9Gu-OBiU?si=3bLmCqUeV7lpAkjB"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>Cinematography Reel | Cameron Halliday</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/539bz-fZvWc?si=sGmjRGFjqIs8Y4CY"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>Civil Defense on red alert amid Kristine onslaught | NAC</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/Gej2eHRwlM0?si=0XbAJXF3q6pSG8oD"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>10 Minutes vs. 10 Years of Animation</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/GOqEl4ADyVk?si=Gl0Z-f8ONpErquhn"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>TOM HOLLAND Gets Vulnerable About Mental Health</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/tLRCS48Ens4?si=fM9rB40bYVCWgRrF"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>Dr. Paul Conti: How to Understand & Assess Your Mental Health</h4>
+                            </div>
+                            <div class="videoBox">
+                                <iframe src="https://www.youtube.com/embed/3tisOnOkwzo?si=9S4mt8BGgNB7uskl"
+                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <h4>BIOLOGY explained in 17 Minutes</h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MUSIC SECTION -->
+                <section class="music" id="music">
+                    <h5>Music</h5>
+
+                    <div class="musicGrid">
+                        <div class="musicBox">
+                            <img src="Images/music1.webp" alt="APT">
+                            <div class="musicInfo">
+                                <h4>ROSÉ & 火星人布魯諾Bruno Mars - APT. (華納官方中字版)</h4>
+                                <div class="musicProfile">
+                                    <i class="ri-user-fill"></i>
+                                    <p>華納音樂西洋日韓頻道</p>
+                                </div>
+                                <audio controls>
+                                    <source src="Audio/music1.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="musicBox">
+                            <img src="Images/music2.webp" alt="Die With A Smile">
+                            <div class="musicInfo">
+                                <h4>Lady Gaga, Bruno Mars - Die With A Smile (Official Music Video)</h4>
+                                <div class="musicProfile">
+                                    <i class="ri-user-fill"></i>
+                                    <p>Lady Gaga</p>
+                                </div>
+                                <audio controls>
+                                    <source src="Audio/music2.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="musicBox">
+                            <img src="Images/music3.webp" alt="Active">
+                            <div class="musicInfo">
+                                <h4>Asake, Travis Scott - Active (Official Video)</h4>
+                                <div class="musicProfile">
+                                    <i class="ri-user-fill"></i>
+                                    <p>ASAKE</p>
+                                </div>
+                                <audio controls>
+                                    <source src="Audio/music3.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="musicBox">
+                            <img src="Images/music4.webp" alt="Please Please Please">
+                            <div class="musicInfo">
+                                <h4>Sabrina Carpenter - Please Please Please (Official Video)</h4>
+                                <div class="musicProfile">
+                                    <i class="ri-user-fill"></i>
+                                    <p>Sabrina Carpenter</p>
+                                </div>
+                                <audio controls>
+                                    <source src="Audio/music4.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="musicBox">
+                            <img src="Images/music5.webp" alt="Why Why Why">
+                            <div class="musicInfo">
+                                <h4>Shawn Mendes - Why Why Why (Official Music Video)</h4>
+                                <div class="musicProfile">
+                                    <i class="ri-user-fill"></i>
+                                    <p>Shawn Mendes</p>
+                                </div>
+                                <audio controls>
+                                    <source src="Audio/music5.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="musicBox">
+                            <img src="Images/music6.webp" alt="Angel Of My Dreams">
+                            <div class="musicInfo">
+                                <h4>JADE - Angel Of My Dreams (Official Video)</h4>
+                                <div class="musicProfile">
+                                    <i class="ri-user-fill"></i>
+                                    <p>JADE</p>
+                                </div>
+                                <audio controls>
+                                    <source src="Audio/music6.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="musicBox">
+                            <img src="Images/music7.webp" alt="I Love You, I'm Sorry">
+                            <div class="musicInfo">
+                                <h4>Gracie Abrams - I Love You, I'm Sorry (Official Music Video)</h4>
+                                <div class="musicProfile">
+                                    <i class="ri-user-fill"></i>
+                                    <p>Gracie Abrams</p>
+                                </div>
+                                <audio controls>
+                                    <source src="Audio/music7.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PLAYLIST SECTION -->
+                <section class="playlist" id="playlist">
+                    <h5>Music Playlist</h5>
+
+                    <div class="playlistTrain">
+                        <div class="playlistItem">
+                            <img src="Images/playlist1.jpg" alt="Song 1">
+                            <h4>Feel-Good Vibes</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist2.jpg" alt="Song 2">
+                            <h4>Relaxing Tunes</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist3.jpg" alt="Song 3">
+                            <h4>Indie & Alternative Hits</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist4.jpg" alt="Song 4">
+                            <h4>Upbeat Pop & Dance</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist5.jpg" alt="Song 5">
+                            <h4>Chill & Lo-Fi</h4>
+                        </div>
+                        <!-- Duplicate Items for Seamless Loop -->
+
+                        <div class="playlistItem">
+                            <img src="Images/playlist1.jpg" alt="Song 1">
+                            <h4>Feel-Good Vibes</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist2.jpg" alt="Song 2">
+                            <h4>Relaxing Tunes</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist3.jpg" alt="Song 3">
+                            <h4>Indie & Alternative Hits</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist4.jpg" alt="Song 4">
+                            <h4>Upbeat Pop & Dance</h4>
+                        </div>
+                        <div class="playlistItem">
+                            <img src="Images/playlist5.jpg" alt="Song 5">
+                            <h4>Chill & Lo-Fi</h4>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footerContainer">
+                    <div class="footerSection">
+                        <h4>About Us</h4>
+                        <p>Thanks for visiting! Explore our world of videos, music, and more. Stay connected for
+                            updates!</p>
+                    </div>
+                    <div class="footerSection">
+                        <h4>Section Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#trending">Trending</a></li>
+                            <li><a href="#video">Videos</a></li>
+                            <li><a href="#music">Music</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerSection">
+                        <h4>Follow Us</h4>
+                        <div class="socialIcons">
+                            <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://twitter.com/"><i class="ri-twitter-fill"></i></a>
+                            <a href="https://www.instagram.com/"><i class="ri-instagram-fill"></i></a>
+                        </div>
+                        <div class="footerBottom">
+                            <p>&copy; 2024 Educational Purpose. <span>All rights reserved.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+
+</html>
